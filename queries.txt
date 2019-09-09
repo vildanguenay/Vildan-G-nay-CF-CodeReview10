@@ -36,6 +36,12 @@ ORDER BY COUNT(booking_no) DESC
 show available car no in Brünner Straße
 
 SELECT pick_up, availability
+FROM location
+WHERE pick_up="Brünner Straße 2"
+
+=>query below detours unnecessarily vis table car
+
+SELECT pick_up, availability
 FROM car
 INNER JOIN location on location_id=fk_location_id
 WHERE pick_up="Brünner Straße 2"
